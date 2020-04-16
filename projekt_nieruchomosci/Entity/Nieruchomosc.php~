@@ -273,4 +273,45 @@ class Nieruchomosc
     {
         return $this->numer;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $materialy;
+
+
+    /**
+     * Add materialy.
+     *
+     * @param \Entity\Material $materialy
+     *
+     * @return Nieruchomosc
+     */
+    public function addMaterialy(\Entity\Material $materialy)
+    {
+        $this->materialy[] = $materialy;
+
+        return $this;
+    }
+
+    /**
+     * Remove materialy.
+     *
+     * @param \Entity\Material $materialy
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeMaterialy(\Entity\Material $materialy)
+    {
+        return $this->materialy->removeElement($materialy);
+    }
+
+    /**
+     * Get materialy.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMaterialy()
+    {
+        return $this->materialy;
+    }
 }

@@ -18,6 +18,10 @@ class ComposerStaticInit3067a2a11e9444223a887d26c2068f2a
             'Zend\\EventManager\\' => 18,
             'Zend\\Code\\' => 10,
         ),
+        'V' => 
+        array (
+            'Valitron\\' => 9,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php73\\' => 23,
@@ -56,6 +60,10 @@ class ComposerStaticInit3067a2a11e9444223a887d26c2068f2a
         'Zend\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
+        ),
+        'Valitron\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/valitron/src/Valitron',
         ),
         'Symfony\\Polyfill\\Php73\\' => 
         array (
@@ -131,14 +139,21 @@ class ComposerStaticInit3067a2a11e9444223a887d26c2068f2a
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
-            1 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
             2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
-            3 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            3 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
         ),
     );
 
     public static $prefixesPsr0 = array (
+        'R' => 
+        array (
+            'Repository\\' => 
+            array (
+                0 => __DIR__ . '/../..' . '/',
+            ),
+        ),
         'P' => 
         array (
             'ProxyManager\\' => 

@@ -11,7 +11,7 @@
         <field name="cena" type="float" />
         <field name="cena_m2" type="float" />
 
-        <one-to-one field="mieszkanie" target-entity="Mieszkanie" mapped-by="nieruchomosc" />
+        <one-to-one field="mieszkanie" target-entity="Mieszkanie" mapped-by="nieruchomosc"> <cascade> <cascade-persist /> </cascade> </one-to-one>
         <many-to-one field="miasto" target-entity="Miasto" />
         <many-to-many field="opcjekomunikacji" target-entity="Komunikacja">
             <join-columns>
