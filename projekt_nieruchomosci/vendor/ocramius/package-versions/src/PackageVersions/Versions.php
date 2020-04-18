@@ -46,7 +46,7 @@ final class Versions
   'zendframework/zend-code' => '3.4.1@268040548f92c2bfcba164421c1add2ba43abaaa',
   'zendframework/zend-eventmanager' => '3.2.1@a5e2583a211f73604691586b8406ff7296a946dd',
   'symfony/var-dumper' => 'v5.0.7@f74a126acd701392eef2492a17228d42552c86b5',
-  'wit/orm' => 'dev-master@a78746d09d009ad2532cebf3f6ad92d5311aaa66',
+  'wit/orm' => 'dev-master@d09b32d8e5ba46f2614ba676ca59044b32a2daf2',
 );
 
     private function __construct()
