@@ -16,4 +16,11 @@ class GruntRepository extends \Doctrine\ORM\EntityRepository
         $qb->select('m')->from('Entity\Grunt', 'm')->join('m.nieruchomosc', 'n');
         return $qb->getQuery()->getResult();
     }
+
+    public function pobierzPoNieruchomosci($id)
+    {
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select('m')->from('Entity\Grunt', 'm')->join('m.nieruchomosc', 'n')->where('n.id = :id')->setParameter("id", $id);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
 }

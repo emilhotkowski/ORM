@@ -16,4 +16,11 @@ class DomRepository extends \Doctrine\ORM\EntityRepository
         $qb->select('m')->from('Entity\Dom', 'm')->join('m.nieruchomosc', 'n');
         return $qb->getQuery()->getResult();
     }
+
+    public function pobierzPoNieruchomosci($id)
+    {
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select('m')->from('Entity\Dom', 'm')->join('m.nieruchomosc', 'n')->where('n.id = :id')->setParameter("id", $id);
+        return $qb->getQuery()->getOneOrNullResult();
+    }
 }

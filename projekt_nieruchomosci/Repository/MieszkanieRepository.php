@@ -22,4 +22,17 @@ class MieszkanieRepository extends EntityRepository
 
         return $qb->getQuery()->getResult();
     }
+
+    public function pobierzPoNieruchomosci($id)
+    {
+        
+        $qb = $this->_em->createQueryBuilder();
+        $qb->select('m','n', 'mi')
+            ->from('Entity\Mieszkanie', 'm')
+            ->join('m.nieruchomosc', 'n')
+            ->join('n.miasto', 'mi')
+            ->where('n.id = :id')->setParameter("id", $id);
+ 
+        return $qb->getQuery()->getOneOrNullResult();
+    }
 }
